@@ -1,0 +1,18 @@
+<!-- Use the file tool_data_table_conf.xml.oldlocstyle if you don't want to update your loc files as changed in revision 4550:535d276c92bc-->
+<!-- Locations of indexes for rnastar to use 
+#the script prepStar.sh is an example of how to automate their generation
+# from existing fasta genomes
+#for genome in hg19 hg18 mm9 mm10 rn4 rn5
+do
+  TARGET=${INDEXROOT}/${genome}/rnastar
+  mkdir -p $TARGET
+  cd $TARGET
+  STAR --runMode genomeGenerate --genomeDir $TARGET --genomeFastaFiles ${TARGET}/$genome.fa --runThreadN 4
+done
+-->
+<tables>
+    <table name="rnastar_indexes" comment_char="#">
+        <columns>value, dbkey, name, path</columns>
+        <file path="tool-data/rnastar_indices.loc" />
+    </table>
+</tables>
