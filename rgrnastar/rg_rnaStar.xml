@@ -1,4 +1,4 @@
-<tool id="rna_star" name="RNA-STAR" version="0.23">
+<tool id="rna_star" name="RNA-STAR" version="0.24">
     <description>Gapped-read mapper for RNA-seq data</description>
     <requirements>
         <requirement type="package" version="2.3.0e">rnastar</requirement>
